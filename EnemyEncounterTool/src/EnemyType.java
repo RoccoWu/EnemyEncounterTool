@@ -8,9 +8,9 @@ public enum EnemyType {
     SHIELDTHUG,
     BOSS;
 
-    public static String makeEnemyTypeMenu() {
+    public static String makeEnemyDastabase() {
 
-        String categoryMenu = "Choose a category to view items: ";
+        String categoryMenu = "Choose type of enemies: ";
         for(EnemyType t : EnemyType.values()){
             categoryMenu += "\n" + (t.ordinal() + 1)
                     + ": " + t.name();
