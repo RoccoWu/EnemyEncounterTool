@@ -7,10 +7,9 @@ Sunday 4/30:   Overview:  Started out my outline for the Enemy Encounter Tool by
         To do next time: Finish out the hierarchy and makig sure that the inheritances work.
                          Start fleshing out my main class and develop how to make hierarchy more robust and interesting with how different enemy types have different 				 abilities and methods.
 
-Sunday 5/2:   Overview:  Started out my outline for the Enemy Encounter Tool by setting up the basic hierarchy structures for several 					  classes, enum classes, and interfaces
+Sunday 5/2:   Overview:  Worked on Menu for the system, developed the Combat Encounter Tool to flesh out the functionality that the user interfaces with while expanding hierarchies of the enemies. In the middle of updating the createCombatEncounter method
     
                   (3 HOUR Coding SESSION.)
                     added 
     
-        To do next time: Finish out the hierarchy and makig sure that the inheritances work.
-                         Start fleshing out my main class and develop how to make hierarchy more robust and interesting with how different enemy types have different 				 abilities and methods.
+        To do next time: Finish CombatEncounterTool main program
