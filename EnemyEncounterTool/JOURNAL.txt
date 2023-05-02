@@ -5,4 +5,12 @@ Sunday 4/30:   Overview:  Started out my outline for the Enemy Encounter Tool by
                     added 
     
         To do next time: Finish out the hierarchy and makig sure that the inheritances work.
-                       Start fleshing out my main class and develop how to make hierarchy more robust and interesting with how different 				     enemy types have different abilities and methods.
+                         Start fleshing out my main class and develop how to make hierarchy more robust and interesting with how different enemy types have different 				 abilities and methods.
+
+Sunday 5/2:   Overview:  Started out my outline for the Enemy Encounter Tool by setting up the basic hierarchy structures for several 					  classes, enum classes, and interfaces
+    
+                  (3 HOUR Coding SESSION.)
+                    added 
+    
+        To do next time: Finish out the hierarchy and makig sure that the inheritances work.
+                         Start fleshing out my main class and develop how to make hierarchy more robust and interesting with how different enemy types have different 				 abilities and methods.

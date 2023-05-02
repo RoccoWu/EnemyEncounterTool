@@ -1,18 +1,17 @@
-public class ThugLevel2 extends ThugLevel1 implements  WeaponUser{
-    public boolean doesLeapAttack;
-    public int leapAttackCooldown;
+public class ThugLevel3 extends ThugLevel2 implements  WeaponUser{
+    public boolean canCounter;
     public boolean canPickUpWeapon;
 
-    public ThugLevel2(String name, int health, int walkSpeed, int runSpeed, int viewDistance, int blindedMovementSpeed, String description, int health1, int attackDamage, int initialAttackTimer, int minAttackTimer, int maxAttackTimer, boolean canUseWeapon, ComboDatabase comboDB, boolean regularCombos, boolean doesLeapAttack, int leapAttackCooldown) {
-        super(name, health, walkSpeed, runSpeed, viewDistance, blindedMovementSpeed, description, health1, attackDamage, initialAttackTimer, minAttackTimer, maxAttackTimer, canUseWeapon, comboDB, regularCombos);
-        this.doesLeapAttack = doesLeapAttack;
-        this.leapAttackCooldown = leapAttackCooldown;
+    public ThugLevel3(String name, int health, int walkSpeed, int runSpeed, int viewDistance, int blindedMovementSpeed, String description, int health1, int attackDamage, int initialAttackTimer, int minAttackTimer, int maxAttackTimer, boolean canUseWeapon, ComboDatabase comboDB, boolean regularCombos, boolean doesLeapAttack, int leapAttackCooldown, boolean canCounter) {
+        super(name, health, walkSpeed, runSpeed, viewDistance, blindedMovementSpeed, description, health1, attackDamage, initialAttackTimer, minAttackTimer, maxAttackTimer, canUseWeapon, comboDB, regularCombos, doesLeapAttack, leapAttackCooldown);
+        this.canCounter = canCounter;
     }
 
     @Override
     public String toString() {
-        return "ThugLevel2{" +
-                "doesLeapAttack=" + doesLeapAttack +
+        return "ThugLevel3{" +
+                "canCounter=" + canCounter +
+                ", doesLeapAttack=" + doesLeapAttack +
                 ", leapAttackCooldown=" + leapAttackCooldown +
                 ", regularCombos=" + regularCombos +
                 ", canPickUpWeapon=" + canPickUpWeapon +
@@ -32,4 +31,6 @@ public class ThugLevel2 extends ThugLevel1 implements  WeaponUser{
                 ", blindedMovementSpeed=" + blindedMovementSpeed +
                 '}';
     }
+
+
 }
