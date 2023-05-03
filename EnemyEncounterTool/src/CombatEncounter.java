@@ -1,11 +1,9 @@
 public class CombatEncounter {
     private String combatEncounterName;
-    private int combatEncounterSize;
+    //make a list of enemies
 
-
-    public CombatEncounter(String combatEncounterName, int combatEncounterSize) {
+    public CombatEncounter(String combatEncounterName) {
         this.combatEncounterName = combatEncounterName;
-        this.combatEncounterSize = combatEncounterSize;
     }
     public String getCombatEncounterName() {
         return combatEncounterName;
@@ -15,11 +13,6 @@ public class CombatEncounter {
         this.combatEncounterName = combatEncounterName;
     }
 
-    public int getCombatEncounterSize() {
-        return combatEncounterSize;
-    }
+    //add enemy
 
-    public void setCombatEncounterSize(int combatEncounterSize) {
-        this.combatEncounterSize = combatEncounterSize;
-    }
 }

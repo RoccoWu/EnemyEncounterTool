@@ -84,21 +84,53 @@ public class CombatEncounterTool {
                 hasFinishedRunningProgram = false;
                 bff.printFancy(mainMenu.getMenuString());
                 ArrayList<EnemyType> enemyTypes = new ArrayList<>();
-                EnemyType.makeEnemyDastabase();
-                bff.printFancy(EnemyType.makeEnemyDastabase());
+                EnemyType.makeEnemyDatabase();
+                bff.printFancy(EnemyType.makeEnemyDatabase());
                 return;
             } else if (ceSize < 1 || ceSize > maxEnemiesInCounter) {
                 ceSize = bff.inputInt("Invalid Input, please input a number between 1 and " + maxEnemiesInCounter + " or -1 to quit");
             }
         }
 
-            CombatEncounter newCombatEncounter = new CombatEncounter(ceName,ceSize);
+            CombatEncounter newCombatEncounter = new CombatEncounter(ceName);
 
             for(int i = 1; i<= ceSize; i++)
             {
                 //TODO: print enemy types menu, the user will select which enemy type, add that enemy type into a list of enemy types (npcs) that the Combat Encounter will hold, save the
-                bff.printFancy(EnemyType.makeEnemyDastabase());
+                bff.printFancy(EnemyType.makeEnemyDatabase());
                 int userEnemyTypeInput = bff.inputInt("Select enemy type");
+                //switch statement here
+                switch(userEnemyTypeInput)
+                {
+                    case 1:
+                    EnemyType.getEnemyNumber(1);
+                    break;
+                    case 2:
+                        EnemyType.getEnemyNumber(2);
+                        break;
+                    case 3:
+                        EnemyType.getEnemyNumber(3);
+                        break;
+                    case 4:
+                        EnemyType.getEnemyNumber(4);
+                        break;
+                    case 5:
+                        EnemyType.getEnemyNumber(5);
+                        break;
+                    case 6:
+                        EnemyType.getEnemyNumber(6);
+                        break;
+                    case 7:
+                        EnemyType.getEnemyNumber(7);
+                        break;
+                    case 8:
+                        EnemyType.getEnemyNumber(8);
+                        break;
+                    default:
+                        bff.print("Invalid Enemy ID");
+                        break;
+                }
+                //add that enemy to the combatencounter by calling a create enemy method in EnemyType and then adding that enemy in CombatEncounter class
             }
             finishedFillingEncounters = true;
 
@@ -108,7 +140,6 @@ public class CombatEncounterTool {
                 if(saveChoice)
                 {
                     //add combat encounter to database of combat encounters via hashmap
-
                 }
                 bff.printFancy(mainMenu.getMenuString());
             }
