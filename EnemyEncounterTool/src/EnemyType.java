@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 public enum EnemyType {
     THUGLEVEL1,
     THUGLEVEL2,
@@ -10,13 +11,12 @@ public enum EnemyType {
 
     public static String makeEnemyDastabase() {
 
-        String categoryMenu = "Choose type of enemies: ";
+        String enenmyMenu = "Choose type of enemies: ";
         for(EnemyType t : EnemyType.values()){
-            categoryMenu += "\n" + (t.ordinal() + 1)
+            enenmyMenu += "\n" + (t.ordinal() + 1)
                     + ": " + t.name();
         }
-        return categoryMenu;
-
+        return enenmyMenu;
     }
     /**
      *
