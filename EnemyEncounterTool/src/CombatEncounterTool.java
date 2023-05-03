@@ -66,27 +66,33 @@ public class CombatEncounterTool {
         String ceName = bff.input("What do you want to name this combat encounter?");
         int ceSize = bff.inputInt("How many enemies will be in this combat encounter?");
         boolean finishedFillingEncounters = false;
-        if(ceSize > 0 && ceSize <= maxEnemiesInCounter)
+        while(ceSize <1 || ceSize > maxEnemiesInCounter) //runs the following until the system gets the correct input
         {
+            if(ceSize == -1)
+            {
+                //quit
+                hasFinishedRunningProgram = false;
+                bff.printFancy(mainMenu.getMenuString());
+                ArrayList<EnemyType> enemyTypes = new ArrayList<>();
+                EnemyType.makeEnemyDastabase();
+                bff.printFancy(EnemyType.makeEnemyDastabase());
+                return;
+            }
+
+            else if(ceSize <1 || ceSize > maxEnemiesInCounter)
+            {
+                ceSize = bff.inputInt("Invalid Input, please input a number between 1 and " +maxEnemiesInCounter + " or -1 to quit");
+            }
+
             for(int i = 1; i<= ceSize; i++)
             {
                 //TODO: print enemy types menu, the user will select which enemy type, add that enemy type into a list of enemy types (npcs) that the Combat Encounter will hold, save the
-                EnemyType.makeEnemyDastabase();
                 bff.printFancy(EnemyType.makeEnemyDastabase());
                 int userEnemyTypeInput = bff.inputInt("Select enemy type");
             }
             finishedFillingEncounters = true;
         }
-        else if(ceSize == -1)
-        {
-            //quit
-            hasFinishedRunningProgram = false;
-            bff.printFancy(mainMenu.getMenuString());
-        }
-        else //makes sure that if it is out of range then asks for another input
-        {
-            ceSize = bff.inputInt("Invalid Input, please input a number between 1 and " +maxEnemiesInCounter + " or -1 to quit");
-        }
+
         if(finishedFillingEncounters)
         {
             boolean saveChoice = bff.inputYesNo("Do you want to save this combat encounter?");
