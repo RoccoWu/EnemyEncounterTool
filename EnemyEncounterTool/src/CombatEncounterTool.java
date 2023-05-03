@@ -1,4 +1,5 @@
-import java.util.ArrayList;
+import java.util.ArrayList; //in case i want to use arraylist
+import java.util.HashMap;
 
 /**
  * EnemyEncounterTool runs the entire program.
@@ -12,24 +13,34 @@ import java.util.ArrayList;
 
 public class CombatEncounterTool {
     public BFF bff;
-    public ArrayList<CombatEncounter> combatEncounter;
+    //public ArrayList<CombatEncounter> combatEncounter;
+    public HashMap<String, CombatEncounter> combatEncounterDB;
     private MainMenu mainMenu;
     private boolean hasFinishedRunningProgram = false;
     private int maxEnemiesInCounter = 10;
     private String userInput;
     private static final String ENEMYENCOUNTERLIST = "src/enemyencounters.csv";
-    public CombatEncounterTool(BFF bff, ArrayList<CombatEncounter> combatEncounter, MainMenu mainMenu) {
+
+    public CombatEncounterTool(BFF bff, HashMap<String, CombatEncounter> combatEncounterDB, MainMenu mainMenu) {
+        this.bff = bff;
+        this.combatEncounterDB = combatEncounterDB;
+        this.mainMenu = mainMenu;
+    }
+
+   /* public CombatEncounterTool(BFF bff, ArrayList<CombatEncounter> combatEncounter, MainMenu mainMenu) {
         this.bff = bff;
         this.combatEncounter = combatEncounter;
         this.mainMenu = mainMenu;
-    }
+    }*/
 
     public static void main(String[] args) {
         System.out.println("Big P3NIS");
         BFF bff = new BFF();
-        ArrayList<CombatEncounter> combatDatabase = new ArrayList<>();
+        //ArrayList<CombatEncounter> combatDatabase = new ArrayList<>();
+        HashMap<String, CombatEncounter> combatEncounterDB = new HashMap<>();
         MainMenu mainMenu = new MainMenu();
-        CombatEncounterTool combatEncounterTool = new CombatEncounterTool(bff, combatDatabase, mainMenu);
+        CombatEncounterTool combatEncounterTool = new CombatEncounterTool(bff, combatEncounterDB, mainMenu);
+        //CombatEncounterTool combatEncounterTool = new CombatEncounterTool(bff, combatDatabase, mainMenu);
         combatEncounterTool.runProgram();
     }
     public void runProgram()
@@ -68,8 +79,7 @@ public class CombatEncounterTool {
         boolean finishedFillingEncounters = false;
         while(ceSize <1 || ceSize > maxEnemiesInCounter) //runs the following until the system gets the correct input
         {
-            if(ceSize == -1)
-            {
+            if (ceSize == -1) {
                 //quit
                 hasFinishedRunningProgram = false;
                 bff.printFancy(mainMenu.getMenuString());
@@ -77,12 +87,12 @@ public class CombatEncounterTool {
                 EnemyType.makeEnemyDastabase();
                 bff.printFancy(EnemyType.makeEnemyDastabase());
                 return;
+            } else if (ceSize < 1 || ceSize > maxEnemiesInCounter) {
+                ceSize = bff.inputInt("Invalid Input, please input a number between 1 and " + maxEnemiesInCounter + " or -1 to quit");
             }
+        }
 
-            else if(ceSize <1 || ceSize > maxEnemiesInCounter)
-            {
-                ceSize = bff.inputInt("Invalid Input, please input a number between 1 and " +maxEnemiesInCounter + " or -1 to quit");
-            }
+            CombatEncounter newCombatEncounter = new CombatEncounter(ceName,ceSize);
 
             for(int i = 1; i<= ceSize; i++)
             {
@@ -91,19 +101,18 @@ public class CombatEncounterTool {
                 int userEnemyTypeInput = bff.inputInt("Select enemy type");
             }
             finishedFillingEncounters = true;
-        }
 
-        if(finishedFillingEncounters)
-        {
-            boolean saveChoice = bff.inputYesNo("Do you want to save this combat encounter?");
-            if(saveChoice)
+            if(finishedFillingEncounters)
             {
-                //add combat encounter to database of combat encounters
-            }
-            bff.printFancy(mainMenu.getMenuString());
-        }
-    }
+                boolean saveChoice = bff.inputYesNo("Do you want to save this combat encounter?");
+                if(saveChoice)
+                {
+                    //add combat encounter to database of combat encounters via hashmap
 
+                }
+                bff.printFancy(mainMenu.getMenuString());
+            }
+        }
     public void viewAllCombatEncounter()
     {
         bff.print("VIEW ALL COMBAT ENCOUNTER");
@@ -120,5 +129,18 @@ public class CombatEncounterTool {
     {
         bff.print("Bye see you next time my g");
         hasFinishedRunningProgram = true;
+    }
+
+    public void addCombatEncountertoDB(String name, CombatEncounter encounter)
+    {
+        combatEncounterDB.put(name, encounter);
+    }
+    public CombatEncounter getCombatEncounter(String name)
+    {
+        return combatEncounterDB.get(name);
+    }
+    public void removeCombatEncounter(String name)
+    {
+        combatEncounterDB.remove(name);
     }
 }
