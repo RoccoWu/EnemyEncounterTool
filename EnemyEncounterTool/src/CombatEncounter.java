@@ -1,7 +1,9 @@
+import java.util.ArrayList;
+
 public class CombatEncounter {
     private String combatEncounterName;
     //make a list of enemies
-
+    ArrayList<EnemyBehaviorComponent> enemies = new ArrayList<EnemyBehaviorComponent>();
     public CombatEncounter(String combatEncounterName) {
         this.combatEncounterName = combatEncounterName;
     }
@@ -14,5 +16,9 @@ public class CombatEncounter {
     }
 
     //add enemy
+    public void addEnemy(EnemyBehaviorComponent enemy)
+    {
+        enemies.add(enemy);
+    }
 
 }

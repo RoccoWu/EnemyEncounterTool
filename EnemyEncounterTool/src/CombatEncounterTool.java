@@ -100,37 +100,30 @@ public class CombatEncounterTool {
                 bff.printFancy(EnemyType.makeEnemyDatabase());
                 int userEnemyTypeInput = bff.inputInt("Select enemy type");
                 //switch statement here
-                switch(userEnemyTypeInput)
+                //TODO: check to see if input is in bounds
+                EnemyType enemyToAdd = EnemyType.values()[userEnemyTypeInput - 1];
+                switch(enemyToAdd)
                 {
-                    case 1:
-                    EnemyType.getEnemyNumber(1);
-                    break;
-                    case 2:
-                        EnemyType.getEnemyNumber(2);
-                        break;
-                    case 3:
-                        EnemyType.getEnemyNumber(3);
-                        break;
-                    case 4:
-                        EnemyType.getEnemyNumber(4);
-                        break;
-                    case 5:
-                        EnemyType.getEnemyNumber(5);
-                        break;
-                    case 6:
-                        EnemyType.getEnemyNumber(6);
-                        break;
-                    case 7:
-                        EnemyType.getEnemyNumber(7);
-                        break;
-                    case 8:
-                        EnemyType.getEnemyNumber(8);
-                        break;
-                    default:
-                        bff.print("Invalid Enemy ID");
-                        break;
+                    case THUGLEVEL1:
+                        newCombatEncounter.addEnemy(new ThugLevel1("ThugLevel1", 100, ));
+                    }
+                    case THUGLEVEL2 -> {
+                    }
+                    case THUGLEVEL3 -> {
+                    }
+                    case TANKTHUG -> {
+                    }
+                    case AGILETHUG -> {
+                    }
+                    case KNIFETHUG -> {
+                    }
+                    case SHIELDTHUG -> {
+                    }
+                    case BOSS -> {
+                    }
                 }
                 //add that enemy to the combatencounter by calling a create enemy method in EnemyType and then adding that enemy in CombatEncounter class
+
             }
             finishedFillingEncounters = true;
 
