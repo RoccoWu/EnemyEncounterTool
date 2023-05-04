@@ -104,7 +104,7 @@ public class CombatEncounterTool {
                 EnemyType enemyToAdd = EnemyType.values()[userEnemyTypeInput - 1];
                 switch(enemyToAdd)
                 {
-                    case THUGLEVEL1:
+                    /*case THUGLEVEL1:
                         newCombatEncounter.addEnemy(new ThugLevel1("ThugLevel1", 100, ));
                     }
                     case THUGLEVEL2 -> {
@@ -120,7 +120,7 @@ public class CombatEncounterTool {
                     case SHIELDTHUG -> {
                     }
                     case BOSS -> {
-                    }
+                    }*/
                 }
                 //add that enemy to the combatencounter by calling a create enemy method in EnemyType and then adding that enemy in CombatEncounter class
 
