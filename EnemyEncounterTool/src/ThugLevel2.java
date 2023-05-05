@@ -3,10 +3,11 @@ public class ThugLevel2 extends ThugLevel1 implements  WeaponUser{
     public int leapAttackCooldown;
     public boolean canPickUpWeapon;
 
-    public ThugLevel2(String name, int health, int walkSpeed, int runSpeed, int viewDistance, int blindedMovementSpeed, String description, int health1, int attackDamage, int initialAttackTimer, int minAttackTimer, int maxAttackTimer, boolean canUseWeapon, ComboDatabase comboDB, boolean regularCombos, boolean doesLeapAttack, int leapAttackCooldown) {
-        super(name, health, walkSpeed, runSpeed, viewDistance, blindedMovementSpeed, description, health1, attackDamage, initialAttackTimer, minAttackTimer, maxAttackTimer, canUseWeapon, comboDB, regularCombos);
+    public ThugLevel2(String name, int health, int walkSpeed, int runSpeed, int viewDistance, int blindedMovementSpeed, String description, int attackDamage, int initialAttackTimer, int minAttackTimer, int maxAttackTimer, boolean canUseWeapon, ComboDatabase comboDB, boolean regularCombos, boolean canPickUpWeapon, boolean doesLeapAttack, int leapAttackCooldown, boolean canPickUpWeapon1) {
+        super(name, health, walkSpeed, runSpeed, viewDistance, blindedMovementSpeed, description, attackDamage, initialAttackTimer, minAttackTimer, maxAttackTimer, canUseWeapon, comboDB, regularCombos, canPickUpWeapon);
         this.doesLeapAttack = doesLeapAttack;
         this.leapAttackCooldown = leapAttackCooldown;
+        this.canPickUpWeapon = canPickUpWeapon1;
     }
 
     @Override
@@ -14,10 +15,10 @@ public class ThugLevel2 extends ThugLevel1 implements  WeaponUser{
         return "ThugLevel2{" +
                 "doesLeapAttack=" + doesLeapAttack +
                 ", leapAttackCooldown=" + leapAttackCooldown +
+                ", canPickUpWeapon=" + canPickUpWeapon +
                 ", regularCombos=" + regularCombos +
                 ", canPickUpWeapon=" + canPickUpWeapon +
                 ", description='" + description + '\'' +
-                ", health=" + health +
                 ", attackDamage=" + attackDamage +
                 ", initialAttackTimer=" + initialAttackTimer +
                 ", minAttackTimer=" + minAttackTimer +

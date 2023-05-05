@@ -2,9 +2,10 @@ public class ThugLevel3 extends ThugLevel2 implements  WeaponUser{
     public boolean canCounter;
     public boolean canPickUpWeapon;
 
-    public ThugLevel3(String name, int health, int walkSpeed, int runSpeed, int viewDistance, int blindedMovementSpeed, String description, int health1, int attackDamage, int initialAttackTimer, int minAttackTimer, int maxAttackTimer, boolean canUseWeapon, ComboDatabase comboDB, boolean regularCombos, boolean doesLeapAttack, int leapAttackCooldown, boolean canCounter) {
-        super(name, health, walkSpeed, runSpeed, viewDistance, blindedMovementSpeed, description, health1, attackDamage, initialAttackTimer, minAttackTimer, maxAttackTimer, canUseWeapon, comboDB, regularCombos, doesLeapAttack, leapAttackCooldown);
+    public ThugLevel3(String name, int health, int walkSpeed, int runSpeed, int viewDistance, int blindedMovementSpeed, String description, int attackDamage, int initialAttackTimer, int minAttackTimer, int maxAttackTimer, boolean canUseWeapon, ComboDatabase comboDB, boolean regularCombos, boolean canPickUpWeapon, boolean doesLeapAttack, int leapAttackCooldown, boolean canPickUpWeapon1, boolean canCounter, boolean canPickUpWeapon2) {
+        super(name, health, walkSpeed, runSpeed, viewDistance, blindedMovementSpeed, description, attackDamage, initialAttackTimer, minAttackTimer, maxAttackTimer, canUseWeapon, comboDB, regularCombos, canPickUpWeapon, doesLeapAttack, leapAttackCooldown, canPickUpWeapon1);
         this.canCounter = canCounter;
+        this.canPickUpWeapon = canPickUpWeapon2;
     }
 
     @Override

@@ -19,6 +19,7 @@ public class CombatEncounterTool {
     private boolean hasFinishedRunningProgram = false;
     private int maxEnemiesInCounter = 10;
     private String userInput;
+    private ComboDatabase comboDB;
     private static final String ENEMYENCOUNTERLIST = "src/enemyencounters.csv";
 
     public CombatEncounterTool(BFF bff, HashMap<String, CombatEncounter> combatEncounterDB, MainMenu mainMenu) {
@@ -104,39 +105,50 @@ public class CombatEncounterTool {
                 EnemyType enemyToAdd = EnemyType.values()[userEnemyTypeInput - 1];
                 switch(enemyToAdd)
                 {
-                    /*case THUGLEVEL1:
-                        newCombatEncounter.addEnemy(new ThugLevel1("ThugLevel1", 100, ));
+                    case THUGLEVEL1:
+                        newCombatEncounter.addEnemy(new ThugLevel1("Thug Level 1", 100, 1, 5, 10, 2, "these thugs are the more numerous types you will encounter", 20, 3, 3, 5, true, comboDB, true, true));
+                        break;
+
+                    case THUGLEVEL2:
+                        newCombatEncounter.addEnemy(new ThugLevel2("Thug Level 2", 100, 1, 5, 10, 2, "these thugs are the more numerous types you will encounter", 120, 25, 2, 3,true, comboDB, true, true, true, 5, true));
+                        break;
+                    case THUGLEVEL3:
+                        newCombatEncounter.addEnemy(new ThugLevel3("Thug Level 3", 100, 1, 6, 15, 2, "these thugs are the more numerous types you will encounter", 120, 25, 2, 3,true,  comboDB, true, true, true, 5));
+                        break;
+                    case TANKTHUG:
+                        newCombatEncounter.addEnemy(new ThugLevel3("Thug Level 3", 100, 1, 6, 15, 2, "these thugs are the more numerous types you will encounter", 120, 25, 2, 3,true, comboDB, true, true, false, 0));
+
+                        break;
+                    case AGILETHUG:
+                        newCombatEncounter.addEnemy(new ThugLevel3("Thug Level 3", 100, 1, 6, 15, 2, "these thugs are the more numerous types you will encounter", 120, 25, 2, 3,true,  comboDB, true, true, true, 5));
+
+                        break;
+                    case KNIFETHUG:
+                        newCombatEncounter.addEnemy(new ThugLevel3("Thug Level 3", 100, 1, 6, 15, 2, "these thugs are the more numerous types you will encounter", 120, 25, 2, 3,true,  comboDB, true, true, true, 5));
+                        break;
+                    case SHIELDTHUG:
+                        newCombatEncounter.addEnemy(new ThugLevel3("Thug Level 3", 100, 1, 6, 15, 2, "these thugs are the more numerous types you will encounter", 120, 25, 2, 3,true,  comboDB, true, true, true, 5));
+                        break;
+                    case BOSS:
+                        newCombatEncounter.addEnemy(new Boss("Big Boss", 100, 1, 6, 15, 2, "these thugs are the more numerous types you will encounter", 30, 3, 3, 5,true, comboDB, true, 100));
+                        break;
                     }
-                    case THUGLEVEL2 -> {
-                    }
-                    case THUGLEVEL3 -> {
-                    }
-                    case TANKTHUG -> {
-                    }
-                    case AGILETHUG -> {
-                    }
-                    case KNIFETHUG -> {
-                    }
-                    case SHIELDTHUG -> {
-                    }
-                    case BOSS -> {
-                    }*/
                 }
                 //add that enemy to the combatencounter by calling a create enemy method in EnemyType and then adding that enemy in CombatEncounter class
-
-            }
             finishedFillingEncounters = true;
-
             if(finishedFillingEncounters)
             {
-                boolean saveChoice = bff.inputYesNo("Do you want to save this combat encounter?");
-                if(saveChoice)
-                {
-                    //add combat encounter to database of combat encounters via hashmap
-                }
-                bff.printFancy(mainMenu.getMenuString());
+            boolean saveChoice = bff.inputYesNo("Do you want to save this combat encounter?");
+            if(saveChoice)
+            {
+                //add combat encounter to database of combat encounters via hashmap
             }
-        }
+            bff.printFancy(mainMenu.getMenuString());
+            }
+    }
+
+
+
     public void viewAllCombatEncounter()
     {
         bff.print("VIEW ALL COMBAT ENCOUNTER");
