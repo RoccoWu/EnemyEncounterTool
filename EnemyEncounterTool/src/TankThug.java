@@ -1,22 +1,23 @@
-public class Boss extends EnemyBehaviorComponent{
+public class TankThug extends EnemyBehaviorComponent{
 
-    public boolean disableOneShotFinisher;
-    public int finisherDamage;
+    public boolean goesUnstoppable;
+    public int unstoppableChance;
+    public int unstoppableDuration;
 
-
-    public Boss(String name, int health, int walkSpeed, int runSpeed, int viewDistance, int blindedMovementSpeed, String description, int attackDamage, int initialAttackTimer, int minAttackTimer, int maxAttackTimer, boolean canUseWeapon, ComboDatabase comboDB, boolean disableOneShotFinisher, int finisherDamage) {
+    public TankThug(String name, int health, int walkSpeed, int runSpeed, int viewDistance, int blindedMovementSpeed, String description, int attackDamage, int initialAttackTimer, int minAttackTimer, int maxAttackTimer, boolean canUseWeapon, ComboDatabase comboDB, boolean goesUnstoppable, int unstoppableChance, int unstoppableDuration) {
         super(name, health, walkSpeed, runSpeed, viewDistance, blindedMovementSpeed, description, attackDamage, initialAttackTimer, minAttackTimer, maxAttackTimer, canUseWeapon, comboDB);
-        this.disableOneShotFinisher = disableOneShotFinisher;
-        this.finisherDamage = finisherDamage;
+        this.goesUnstoppable = goesUnstoppable;
+        this.unstoppableChance = unstoppableChance;
+        this.unstoppableDuration = unstoppableDuration;
     }
 
     @Override
     public String toString() {
-        return "Boss{" +
-                "disableOneShotFinisher=" + disableOneShotFinisher +
-                ", finisherDamage=" + finisherDamage +
+        return "TankThug{" +
+                "goesUnstoppable=" + goesUnstoppable +
+                ", unstoppableChance=" + unstoppableChance +
+                ", unstoppableDuration=" + unstoppableDuration +
                 ", description='" + description + '\'' +
-                ", health=" + health +
                 ", attackDamage=" + attackDamage +
                 ", initialAttackTimer=" + initialAttackTimer +
                 ", minAttackTimer=" + minAttackTimer +
@@ -31,6 +32,4 @@ public class Boss extends EnemyBehaviorComponent{
                 ", blindedMovementSpeed=" + blindedMovementSpeed +
                 '}';
     }
-
-
 }

@@ -106,28 +106,26 @@ public class CombatEncounterTool {
                 switch(enemyToAdd)
                 {
                     case THUGLEVEL1:
-                        newCombatEncounter.addEnemy(new ThugLevel1("Thug Level 1", 100, 1, 5, 10, 2, "these thugs are the more numerous types you will encounter", 20, 3, 3, 5, true, comboDB, true, true));
+                        newCombatEncounter.addEnemy(new ThugLevel1("Thug Level 1", 100, 1, 5, 10, 2, "these thugs are the more numerous types you will encounter", 20, 3, 3, 5, true, comboDB, true));
                         break;
 
                     case THUGLEVEL2:
-                        newCombatEncounter.addEnemy(new ThugLevel2("Thug Level 2", 100, 1, 5, 10, 2, "these thugs are the more numerous types you will encounter", 120, 25, 2, 3,true, comboDB, true, true, true, 5, true));
+                        newCombatEncounter.addEnemy(new ThugLevel2("Thug Level 2", 100, 1, 5, 10, 2, "these thugs are the more numerous types you will encounter", 120, 25, 2, 3,true, comboDB, true, true, 5));
                         break;
                     case THUGLEVEL3:
-                        newCombatEncounter.addEnemy(new ThugLevel3("Thug Level 3", 100, 1, 6, 15, 2, "these thugs are the more numerous types you will encounter", 120, 25, 2, 3,true,  comboDB, true, true, true, 5));
+                        newCombatEncounter.addEnemy(new ThugLevel3("Thug Level 3", 100, 1, 6, 15, 2, "these thugs are the more numerous types you will encounter", 120, 25, 2, 3,true,  comboDB, true, true, 4, true));
                         break;
                     case TANKTHUG:
-                        newCombatEncounter.addEnemy(new ThugLevel3("Thug Level 3", 100, 1, 6, 15, 2, "these thugs are the more numerous types you will encounter", 120, 25, 2, 3,true, comboDB, true, true, false, 0));
-
+                        newCombatEncounter.addEnemy(new ThugLevel3("Thug Level 3", 100, 1, 6, 15, 2, "these thugs are the more numerous types you will encounter", 120, 25, 2, 3,true,  comboDB, true, true, 4, true));
                         break;
                     case AGILETHUG:
-                        newCombatEncounter.addEnemy(new ThugLevel3("Thug Level 3", 100, 1, 6, 15, 2, "these thugs are the more numerous types you will encounter", 120, 25, 2, 3,true,  comboDB, true, true, true, 5));
-
+                        newCombatEncounter.addEnemy(new ThugLevel3("Thug Level 3", 100, 1, 6, 15, 2, "these thugs are the more numerous types you will encounter", 120, 25, 2, 3,true,  comboDB, true, true, 4, true));
                         break;
                     case KNIFETHUG:
-                        newCombatEncounter.addEnemy(new ThugLevel3("Thug Level 3", 100, 1, 6, 15, 2, "these thugs are the more numerous types you will encounter", 120, 25, 2, 3,true,  comboDB, true, true, true, 5));
+                        newCombatEncounter.addEnemy(new ThugLevel3("Thug Level 3", 100, 1, 6, 15, 2, "these thugs are the more numerous types you will encounter", 120, 25, 2, 3,true,  comboDB, true, true, 4, true));
                         break;
                     case SHIELDTHUG:
-                        newCombatEncounter.addEnemy(new ThugLevel3("Thug Level 3", 100, 1, 6, 15, 2, "these thugs are the more numerous types you will encounter", 120, 25, 2, 3,true,  comboDB, true, true, true, 5));
+                        newCombatEncounter.addEnemy(new ThugLevel3("Thug Level 3", 100, 1, 6, 15, 2, "these thugs are the more numerous types you will encounter", 120, 25, 2, 3,true,  comboDB, true, true, 4, true));
                         break;
                     case BOSS:
                         newCombatEncounter.addEnemy(new Boss("Big Boss", 100, 1, 6, 15, 2, "these thugs are the more numerous types you will encounter", 30, 3, 3, 5,true, comboDB, true, 100));

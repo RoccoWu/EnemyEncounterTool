@@ -1,12 +1,9 @@
 public class ThugLevel1 extends EnemyBehaviorComponent implements  WeaponUser{
     public boolean regularCombos;
-    public boolean canPickUpWeapon;
 
-
-    public ThugLevel1(String name, int health, int walkSpeed, int runSpeed, int viewDistance, int blindedMovementSpeed, String description, int attackDamage, int initialAttackTimer, int minAttackTimer, int maxAttackTimer, boolean canUseWeapon, ComboDatabase comboDB, boolean regularCombos, boolean canPickUpWeapon) {
+    public ThugLevel1(String name, int health, int walkSpeed, int runSpeed, int viewDistance, int blindedMovementSpeed, String description, int attackDamage, int initialAttackTimer, int minAttackTimer, int maxAttackTimer, boolean canUseWeapon, ComboDatabase comboDB, boolean regularCombos) {
         super(name, health, walkSpeed, runSpeed, viewDistance, blindedMovementSpeed, description, attackDamage, initialAttackTimer, minAttackTimer, maxAttackTimer, canUseWeapon, comboDB);
         this.regularCombos = regularCombos;
-        this.canPickUpWeapon = canPickUpWeapon;
     }
 
     @Override
@@ -14,7 +11,6 @@ public class ThugLevel1 extends EnemyBehaviorComponent implements  WeaponUser{
         return "ThugLevel1{" +
                 "regularCombos=" + regularCombos +
                 ", description='" + description + '\'' +
-                ", health=" + health +
                 ", attackDamage=" + attackDamage +
                 ", initialAttackTimer=" + initialAttackTimer +
                 ", minAttackTimer=" + minAttackTimer +
@@ -32,6 +28,6 @@ public class ThugLevel1 extends EnemyBehaviorComponent implements  WeaponUser{
 
     @Override
     public boolean useWeapon() {
-        return canPickUpWeapon;
+        return canUseWeapon;
     }
 }
