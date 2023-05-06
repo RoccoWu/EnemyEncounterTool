@@ -4,7 +4,7 @@ public class MainMenu {
 
     public enum MenuOptions {
         CREATE_A_COMBAT_ENCOUNTER("Create a combat encounter"),
-        VIEW_ALL_COMBAT_ENCOUNTERS("Display all combat encounter"),
+        VIEW_ALL_COMBAT_ENCOUNTERS("Display all combat encounters"),
         LOOK_UP_NPC_ENEMY_TYPES("Look up NPC Enemy Types"),
         QUIT("Quit");
 

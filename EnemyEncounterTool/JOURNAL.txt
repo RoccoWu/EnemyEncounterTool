@@ -5,7 +5,7 @@ Sunday 4/30:   Overview:  Started out my outline for the Enemy Encounter Tool by
                     added 
     
         To do next time: Finish out the hierarchy and makig sure that the inheritances work.
-                         Start fleshing out my main class and develop how to make hierarchy more robust and interesting with how different enemy types have different 				 abilities and methods.
+                         Start fleshing out my main class and develop how to make hierarchy more robust and interesting with how different enemy types have 					different abilities and methods.
 
 Tuesday 5/2:   Overview:  Worked on Menu for the system, developed the Combat Encounter Tool to flesh out the functionality that the user interfaces with while expanding hierarchies of the enemies. In the middle of updating the createCombatEncounter method
     
@@ -16,7 +16,14 @@ Tuesday 5/2:   Overview:  Worked on Menu for the system, developed the Combat En
 
 Wednesday 5/3:   Overview:  Worked on fleshing out the CombatEncounter Tool to create the enemy types that the players want to make. I'm in the middle of it because my capstone game project that will be at usc games expo has important milestone on Thursday so I'll do the rest another day. Btw go check us out and wishlist on steam https://store.steampowered.com/app/2187370/Blindsight_War_of_the_Wardens/
     
-                  (30 MIONUTE Coding SESSION.)
+                  (30 MINUTE Coding SESSION.)
                     added a switch statement and changes to combat encounter to make an addEnemy method
     
         To do next time: Finish CombatEncounterTool main program
+
+Friday 5/5:   Overview:  Worked on finalizing the Create Combat Encounters feature. Having an extremely rough and miserable time in life in general so I'm just 					trying to push through it right now and do my best. Hope you can understand.
+    
+                  (2 Hour Coding SESSION)
+                    Finalized the Create Combat Encounters option which is nice. Instead of making a list of combat encounters, I decided to use a HashMap so that 			  it is more scalable. I might do the same thing by making a HashMap of EnemyBehaviorComponent/NPCBehaviorComponents in the list so the list 				  inside the Combat Encounter is scalable, if I have time and bandwidth.
+    
+        To do next time: Idk
