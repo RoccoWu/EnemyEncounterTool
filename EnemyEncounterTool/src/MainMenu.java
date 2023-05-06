@@ -27,10 +27,10 @@ public class MainMenu {
         menuOptions.add(MenuOptions.LOOK_UP_NPC_ENEMY_TYPES.getMenuString());
         menuOptions.add(MenuOptions.QUIT.getMenuString());
 
-        for (int i = 1; i < menuOptions.size(); i++) //prints each state of the enums for users to read
+        for (int i = 0; i < menuOptions.size(); i++) //prints each state of the enums for users to read
         {
             String option = menuOptions.get(i);
-            output += i + ":" + option + "\n";
+            output += i +1 + ":" + option + "\n";
         }
         return output;
     }
