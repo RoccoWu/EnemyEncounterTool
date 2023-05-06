@@ -1,14 +1,17 @@
 public class TankThug extends EnemyBehaviorComponent{
 
     public boolean goesUnstoppable;
-    public int unstoppableChance;
-    public int unstoppableDuration;
+    public double unstoppableChance;
 
-    public TankThug(String name, int health, int walkSpeed, int runSpeed, int viewDistance, int blindedMovementSpeed, String description, int attackDamage, int initialAttackTimer, int minAttackTimer, int maxAttackTimer, boolean canUseWeapon, ComboDatabase comboDB, boolean goesUnstoppable, int unstoppableChance, int unstoppableDuration) {
+    public double unstoppableDuration;
+    public double unstoppableCooldown;
+
+    public TankThug(String name, int health, double walkSpeed, double runSpeed, double viewDistance, double blindedMovementSpeed, String description, int attackDamage, int initialAttackTimer, int minAttackTimer, int maxAttackTimer, boolean canUseWeapon, ComboDatabase comboDB, boolean goesUnstoppable, double unstoppableChance, double unstoppableDuration, double unstoppableCooldown) {
         super(name, health, walkSpeed, runSpeed, viewDistance, blindedMovementSpeed, description, attackDamage, initialAttackTimer, minAttackTimer, maxAttackTimer, canUseWeapon, comboDB);
         this.goesUnstoppable = goesUnstoppable;
         this.unstoppableChance = unstoppableChance;
         this.unstoppableDuration = unstoppableDuration;
+        this.unstoppableCooldown = unstoppableCooldown;
     }
 
     @Override
@@ -17,6 +20,7 @@ public class TankThug extends EnemyBehaviorComponent{
                 "goesUnstoppable=" + goesUnstoppable +
                 ", unstoppableChance=" + unstoppableChance +
                 ", unstoppableDuration=" + unstoppableDuration +
+                ", unstoppableCooldown=" + unstoppableCooldown +
                 ", description='" + description + '\'' +
                 ", attackDamage=" + attackDamage +
                 ", initialAttackTimer=" + initialAttackTimer +

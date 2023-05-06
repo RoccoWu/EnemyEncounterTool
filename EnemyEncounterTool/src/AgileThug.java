@@ -1,15 +1,17 @@
-public class ThugLevel3 extends ThugLevel2 implements  WeaponUser{
-    public boolean canCounter;
+public class AgileThug extends ThugLevel2{
 
-    public ThugLevel3(String name, int health, double walkSpeed, double runSpeed, double viewDistance, double blindedMovementSpeed, String description, int attackDamage, int initialAttackTimer, int minAttackTimer, int maxAttackTimer, boolean canUseWeapon, ComboDatabase comboDB, boolean regularCombos, boolean doesLeapAttack, int leapAttackCooldown, boolean canCounter) {
+    public double dodgeChance;
+    public double dodgeCooldown;
+    public AgileThug(String name, int health, double walkSpeed, double runSpeed, double viewDistance, double blindedMovementSpeed, String description, int attackDamage, int initialAttackTimer, int minAttackTimer, int maxAttackTimer, boolean canUseWeapon, ComboDatabase comboDB, boolean regularCombos, boolean doesLeapAttack, int leapAttackCooldown, double dodgeChance, double dodgeCooldown) {
         super(name, health, walkSpeed, runSpeed, viewDistance, blindedMovementSpeed, description, attackDamage, initialAttackTimer, minAttackTimer, maxAttackTimer, canUseWeapon, comboDB, regularCombos, doesLeapAttack, leapAttackCooldown);
-        this.canCounter = canCounter;
+        this.dodgeChance = dodgeChance;
+        this.dodgeCooldown = dodgeCooldown;
     }
-
     @Override
     public String toString() {
-        return "ThugLevel3{" +
-                "canCounter=" + canCounter +
+        return "AgileThug{" +
+                "dodgeChance=" + dodgeChance +
+                ", dodgeCooldown=" + dodgeCooldown +
                 ", doesLeapAttack=" + doesLeapAttack +
                 ", leapAttackCooldown=" + leapAttackCooldown +
                 ", regularCombos=" + regularCombos +
@@ -27,9 +29,5 @@ public class ThugLevel3 extends ThugLevel2 implements  WeaponUser{
                 ", viewDistance=" + viewDistance +
                 ", blindedMovementSpeed=" + blindedMovementSpeed +
                 '}';
-    }
-    @Override
-    public boolean useWeapon() {
-        return canUseWeapon;
     }
 }

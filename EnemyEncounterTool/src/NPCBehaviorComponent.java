@@ -4,12 +4,12 @@ public class NPCBehaviorComponent {
 
     public String name;
     public int health;
-    public int walkSpeed;
-    public int runSpeed;
-    public int viewDistance;
-    public int blindedMovementSpeed;
+    public double walkSpeed;
+    public double runSpeed;
+    public double viewDistance;
+    public double blindedMovementSpeed;
 
-    public NPCBehaviorComponent(String name, int health, int walkSpeed, int runSpeed, int viewDistance, int blindedMovementSpeed) {
+    public NPCBehaviorComponent(String name, int health, double walkSpeed, double runSpeed, double viewDistance, double blindedMovementSpeed) {
         this.name = name;
         this.health = health;
         this.walkSpeed = walkSpeed;
@@ -34,7 +34,7 @@ public class NPCBehaviorComponent {
         this.health = health;
     }
 
-    public int getWalkSpeed() {
+    public double getWalkSpeed() {
         return walkSpeed;
     }
 
@@ -42,7 +42,7 @@ public class NPCBehaviorComponent {
         this.walkSpeed = walkSpeed;
     }
 
-    public int getRunSpeed() {
+    public double getRunSpeed() {
         return runSpeed;
     }
 
@@ -50,7 +50,7 @@ public class NPCBehaviorComponent {
         this.runSpeed = runSpeed;
     }
 
-    public int getViewDistance() {
+    public double getViewDistance() {
         return viewDistance;
     }
 
@@ -58,7 +58,7 @@ public class NPCBehaviorComponent {
         this.viewDistance = viewDistance;
     }
 
-    public int getBlindedMovementSpeed() {
+    public double getBlindedMovementSpeed() {
         return blindedMovementSpeed;
     }
 

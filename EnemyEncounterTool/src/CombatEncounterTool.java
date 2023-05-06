@@ -110,25 +110,25 @@ public class CombatEncounterTool {
                         break;
 
                     case THUGLEVEL2:
-                        newCombatEncounter.addEnemy(new ThugLevel2("Thug Level 2", 100, 1, 5, 10, 2, "these thugs are the more numerous types you will encounter", 120, 25, 2, 3,true, comboDB, true, true, 5));
+                        newCombatEncounter.addEnemy(new ThugLevel2("Thug Level 2", 100, 1, 5, 10, 2, "these thugs are able similar to Thug Level 1s except they can also leap attack to close in distance", 20, 25, 2, 3,true, comboDB, true, true, 5));
                         break;
                     case THUGLEVEL3:
-                        newCombatEncounter.addEnemy(new ThugLevel3("Thug Level 3", 100, 1, 6, 15, 2, "these thugs are the more numerous types you will encounter", 120, 25, 2, 3,true,  comboDB, true, true, 4, true));
+                        newCombatEncounter.addEnemy(new ThugLevel3("Thug Level 3", 120, 1, 6, 15, 2, "these thugs are more advanced with the ability to even counter the player's attacks", 20, 25, 2, 3,true,  comboDB, true, true, 4, true));
                         break;
                     case TANKTHUG:
-                        newCombatEncounter.addEnemy(new ThugLevel3("Thug Level 3", 100, 1, 6, 15, 2, "these thugs are the more numerous types you will encounter", 120, 25, 2, 3,true,  comboDB, true, true, 4, true));
+                        newCombatEncounter.addEnemy(new TankThug("Tank Thug", 150,0.8 , 4, 10, 1.5, "these tank thugs are the more beefier types that take a lot longer to defeat as well as having a chance to go unstoppable where their attacks can't be interrupted", 20 , 25, 2, 3,true,  comboDB, true, 0.25, 4, 10));
                         break;
                     case AGILETHUG:
-                        newCombatEncounter.addEnemy(new ThugLevel3("Thug Level 3", 100, 1, 6, 15, 2, "these thugs are the more numerous types you will encounter", 120, 25, 2, 3,true,  comboDB, true, true, 4, true));
+                        newCombatEncounter.addEnemy(new AgileThug("Agile Thug", 80, 1.25, 8, 10, 2.2, "these thugs are nimble and are able to move a lot quicker as well as dodge the player's attacks", 15, 2, 2, 3,false,  comboDB, true, true, 4, 0.25, 10));
                         break;
                     case KNIFETHUG:
-                        newCombatEncounter.addEnemy(new ThugLevel3("Thug Level 3", 100, 1, 6, 15, 2, "these thugs are the more numerous types you will encounter", 120, 25, 2, 3,true,  comboDB, true, true, 4, true));
+                        newCombatEncounter.addEnemy(new KnifeThug("Thug (Knife)", 100, 1, 6, 15, 2, "these thugs spawn with a knife already", 20, 2, 2, 3,true,  comboDB, true));
                         break;
                     case SHIELDTHUG:
-                        newCombatEncounter.addEnemy(new ThugLevel3("Thug Level 3", 100, 1, 6, 15, 2, "these thugs are the more numerous types you will encounter", 120, 25, 2, 3,true,  comboDB, true, true, 4, true));
+                        newCombatEncounter.addEnemy(new ShieldThug("Thug (Shield)", 100, 1, 6, 15, 2, "these thugs spawn with a shield already", 10, 3, 3, 4,true,  comboDB, true));
                         break;
                     case BOSS:
-                        newCombatEncounter.addEnemy(new Boss("Big Boss", 100, 1, 6, 15, 2, "these thugs are the more numerous types you will encounter", 30, 3, 3, 5,true, comboDB, true, 100));
+                        newCombatEncounter.addEnemy(new Boss("Big Boss", 100, 1, 6, 15, 2, "These are boss type enemies that will ", 30, 2, 2, 4,true, comboDB, true, 100));
                         break;
                     }
                 }

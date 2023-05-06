@@ -8,7 +8,7 @@ public class EnemyBehaviorComponent extends NPCBehaviorComponent{
     public boolean canUseWeapon;
     public ComboDatabase comboDB;
 
-    public EnemyBehaviorComponent(String name, int health, int walkSpeed, int runSpeed, int viewDistance, int blindedMovementSpeed, String description, int attackDamage, int initialAttackTimer, int minAttackTimer, int maxAttackTimer, boolean canUseWeapon, ComboDatabase comboDB) {
+    public EnemyBehaviorComponent(String name, int health, double walkSpeed, double runSpeed, double viewDistance, double blindedMovementSpeed, String description, int attackDamage, int initialAttackTimer, int minAttackTimer, int maxAttackTimer, boolean canUseWeapon, ComboDatabase comboDB) {
         super(name, health, walkSpeed, runSpeed, viewDistance, blindedMovementSpeed);
         this.description = description;
         this.attackDamage = attackDamage;

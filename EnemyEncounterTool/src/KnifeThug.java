@@ -1,14 +1,12 @@
-public class ThugLevel1 extends EnemyBehaviorComponent implements  WeaponUser{
-    public boolean regularCombos;
+public class KnifeThug extends ThugLevel1{
 
-    public ThugLevel1(String name, int health, double walkSpeed, double runSpeed, double viewDistance, double blindedMovementSpeed, String description, int attackDamage, int initialAttackTimer, int minAttackTimer, int maxAttackTimer, boolean canUseWeapon, ComboDatabase comboDB, boolean regularCombos) {
-        super(name, health, walkSpeed, runSpeed, viewDistance, blindedMovementSpeed, description, attackDamage, initialAttackTimer, minAttackTimer, maxAttackTimer, canUseWeapon, comboDB);
-        this.regularCombos = regularCombos;
+    public KnifeThug(String name, int health, double walkSpeed, double runSpeed, double viewDistance, double blindedMovementSpeed, String description, int attackDamage, int initialAttackTimer, int minAttackTimer, int maxAttackTimer, boolean canUseWeapon, ComboDatabase comboDB, boolean regularCombos) {
+        super(name, health, walkSpeed, runSpeed, viewDistance, blindedMovementSpeed, description, attackDamage, initialAttackTimer, minAttackTimer, maxAttackTimer, canUseWeapon, comboDB, regularCombos);
     }
 
     @Override
     public String toString() {
-        return "ThugLevel1{" +
+        return "KnifeThug{" +
                 "regularCombos=" + regularCombos +
                 ", description='" + description + '\'' +
                 ", attackDamage=" + attackDamage +
@@ -24,10 +22,5 @@ public class ThugLevel1 extends EnemyBehaviorComponent implements  WeaponUser{
                 ", viewDistance=" + viewDistance +
                 ", blindedMovementSpeed=" + blindedMovementSpeed +
                 '}';
-    }
-
-    @Override
-    public boolean useWeapon() {
-        return canUseWeapon;
     }
 }
