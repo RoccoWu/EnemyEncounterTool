@@ -8,24 +8,37 @@ public class ThugLevel3 extends ThugLevel2 implements  WeaponUser{
 
     @Override
     public String toString() {
+        String performsRegularCombos;
+        String canUseWeaponString;
+        String canPerformLeapAttack;
+        String canCounterPlayerAttacks;
+        if(regularCombos){performsRegularCombos = "Yes";}
+        else {performsRegularCombos = "No";}
+        if(canUseWeapon){canUseWeaponString = "Yes";}
+        else {canUseWeaponString = "No";}
+        if(doesLeapAttack){canPerformLeapAttack = "Yes";}
+        else {canPerformLeapAttack = "No";}
+        if(canCounter){canCounterPlayerAttacks = "Yes";}
+        else {canCounterPlayerAttacks = "No";}
+
         return "ThugLevel3{" +
-                "canCounter=" + canCounter +
-                ", doesLeapAttack=" + doesLeapAttack +
-                ", leapAttackCooldown=" + leapAttackCooldown +
-                ", regularCombos=" + regularCombos +
-                ", description='" + description + '\'' +
-                ", attackDamage=" + attackDamage +
-                ", initialAttackTimer=" + initialAttackTimer +
-                ", minAttackTimer=" + minAttackTimer +
-                ", maxAttackTimer=" + maxAttackTimer +
-                ", canUseWeapon=" + canUseWeapon +
-                ", comboDB=" + comboDB +
-                ", name='" + name + '\'' +
-                ", health=" + health +
-                ", walkSpeed=" + walkSpeed +
-                ", runSpeed=" + runSpeed +
-                ", viewDistance=" + viewDistance +
-                ", blindedMovementSpeed=" + blindedMovementSpeed +
+                "Thug Name: " + name + '\'' +
+                ", Enemy Description: " + description + '\'' +
+                ", View Distance: " + viewDistance +
+                ", Default Combo: " + regularCombos +
+                ", Health: " + health +
+                ", Attack Damage: " + attackDamage +
+                ", Initial Attack Timer: " + initialAttackTimer +
+                ", Min Attack Timer: " + minAttackTimer +
+                ", Max Attack Timer: " + maxAttackTimer +
+                ", Can Counter Player Attacks: " + canCounter +
+                ", Can Perform Leap Attack: " + doesLeapAttack +
+                ", Leap Attack Cooldown: " + leapAttackCooldown +
+                ", Can Use Weapon: " + canUseWeapon +
+                ", Combo Database: " + comboDB +
+                ", Walk Speed: " + walkSpeed +
+                ", Run Speed: " + runSpeed +
+                ", Blinded Movement Speed: " + blindedMovementSpeed +
                 '}';
     }
     @Override

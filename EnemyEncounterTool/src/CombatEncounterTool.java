@@ -20,7 +20,7 @@ public class CombatEncounterTool {
     private boolean hasFinishedRunningProgram = false;
     private int maxEnemiesInCounter = 10;
     private String userInput;
-    private ComboDatabase comboDB;
+    private ComboDatabase comboDB= new ComboDatabase();
     private static final String ENEMYENCOUNTERLIST = "src/enemyencounters.csv";
 
     public CombatEncounterTool(BFF bff, HashMap<String, CombatEncounter> combatEncounterDB, MainMenu mainMenu) {
@@ -120,7 +120,7 @@ public class CombatEncounterTool {
                         bff.print("Added a Thug Level 3 Enemy to " + ceName);
                         break;
                     case TANKTHUG:
-                        newCombatEncounter.addEnemy(new TankThug("Tank Thug", 150,0.8 , 4, 10, 1.5, " these tank thugs are the more beefier types that take a lot longer to defeat as well as having a chance to go unstoppable where their attacks can't be interrupted ", 20 , 25, 2, 3,true,  comboDB, true, 0.25, 4, 10));
+                        newCombatEncounter.addEnemy(new TankThug("Tank Thug", 150,0.8 , 4, 10, 1.5, " these tank thugs are the more beefier types that take a lot longer to defeat as well as having a chance to go unstoppable where their attacks can't be interrupted ", 20 , 25, 2, 3,false,  comboDB, false, true, 0.25, 4, 10));
                         bff.print("Added a Tank Thug Enemy to " + ceName);
                         break;
                     case AGILETHUG:

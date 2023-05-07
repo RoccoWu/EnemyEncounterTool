@@ -26,4 +26,12 @@ Friday 5/5:   Overview:  Worked on finalizing the Create Combat Encounters featu
                   (2 Hour Coding SESSION)
                     Finalized the Create Combat Encounters option which is nice. Instead of making a list of combat encounters, I decided to use a HashMap so that 			  it is more scalable. I might do the same thing by making a HashMap of EnemyBehaviorComponent/NPCBehaviorComponents in the list so the list 				  inside the Combat Encounter is scalable, if I have time and bandwidth.
     
-        To do next time: Idk
+        To do next time: Just grind and push through
+
+Saturday 5/6:   Overview: Wrapping up the project
+    
+                  (7 Hour Coding SESSION)
+                    - Got the View all combat encounter to worked
+			  - Cleaned up and standardized information in toString, create conditional prints
+    
+        To do next time: Just grind and push through

@@ -6,21 +6,27 @@ public class KnifeThug extends ThugLevel1{
 
     @Override
     public String toString() {
+        String performsRegularCombos;
+        String canUseWeaponString;
+        if(regularCombos){performsRegularCombos = "Yes";}
+        else {performsRegularCombos = "No";}
+        if(canUseWeapon){canUseWeaponString = "Yes";}
+        else {canUseWeaponString = "No";}
         return "KnifeThug{" +
-                "regularCombos=" + regularCombos +
-                ", description='" + description + '\'' +
-                ", attackDamage=" + attackDamage +
-                ", initialAttackTimer=" + initialAttackTimer +
-                ", minAttackTimer=" + minAttackTimer +
-                ", maxAttackTimer=" + maxAttackTimer +
-                ", canUseWeapon=" + canUseWeapon +
-                ", comboDB=" + comboDB +
-                ", name='" + name + '\'' +
-                ", health=" + health +
-                ", walkSpeed=" + walkSpeed +
-                ", runSpeed=" + runSpeed +
-                ", viewDistance=" + viewDistance +
-                ", blindedMovementSpeed=" + blindedMovementSpeed +
+                "Thug Name: " + name + '\'' +
+                ", Enemy Description: " + description + '\'' +
+                ", View Distance: " + viewDistance +
+                ", Default Combo: " + performsRegularCombos +
+                ", Health: " + health +
+                ", Attack Damage: " + attackDamage +
+                ", Initial Attack Timer: " + initialAttackTimer +
+                ", Min Attack Timer: " + minAttackTimer +
+                ", Max Attack Timer: " + maxAttackTimer +
+                ", Can Use Weapon: " + canUseWeaponString +
+                ", Combo Database: " + comboDB +
+                ", Walk Speed: " + walkSpeed +
+                ", Run Speed: " + runSpeed +
+                ", Blinded Movement Speed: " + blindedMovementSpeed +
                 '}';
     }
 }

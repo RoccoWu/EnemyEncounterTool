@@ -9,23 +9,33 @@ public class ThugLevel2 extends ThugLevel1 implements  WeaponUser{
 
     @Override
     public String toString() {
+        String performsRegularCombos;
+        String canUseWeaponString;
+        String canPerformLeapAttackString;
+        if(regularCombos){performsRegularCombos = "Yes";}
+        else {performsRegularCombos = "No";}
+        if(canUseWeapon){canUseWeaponString = "Yes";}
+        else {canUseWeaponString = "No";}
+        if(doesLeapAttack){canPerformLeapAttackString = "Yes";}
+        else {canPerformLeapAttackString = "No";}
+
         return "ThugLevel2{" +
-                "doesLeapAttack=" + doesLeapAttack +
-                ", leapAttackCooldown=" + leapAttackCooldown +
-                ", regularCombos=" + regularCombos +
-                ", description='" + description + '\'' +
-                ", attackDamage=" + attackDamage +
-                ", initialAttackTimer=" + initialAttackTimer +
-                ", minAttackTimer=" + minAttackTimer +
-                ", maxAttackTimer=" + maxAttackTimer +
-                ", canUseWeapon=" + canUseWeapon +
-                ", comboDB=" + comboDB +
-                ", name='" + name + '\'' +
-                ", health=" + health +
-                ", walkSpeed=" + walkSpeed +
-                ", runSpeed=" + runSpeed +
-                ", viewDistance=" + viewDistance +
-                ", blindedMovementSpeed=" + blindedMovementSpeed +
+                "Thug Name: " + name + '\'' +
+                ", Enemy Description: " + description + '\'' +
+                ", View Distance: " + viewDistance +
+                ", Default Combo: " + performsRegularCombos +
+                ", Health: " + health +
+                ", Attack Damage: " + attackDamage +
+                ", Initial Attack Timer: " + initialAttackTimer +
+                ", Min Attack Timer: " + minAttackTimer +
+                ", Max Attack Timer: " + maxAttackTimer +
+                ", Can Perform Leap Attack: " + canPerformLeapAttackString +
+                ", Leap Attack Cooldown: " + leapAttackCooldown +
+                ", Can Use Weapon: " + canUseWeaponString +
+                ", Combo Database: " + comboDB +
+                ", Walk Speed: " + walkSpeed +
+                ",  Run Speed: " + runSpeed +
+                ", Blinded Movement Speed: " + blindedMovementSpeed +
                 '}';
     }
 
