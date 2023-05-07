@@ -1,0 +1,5 @@
+Tutorial Combat Encounter: 
+Thug Level 1,  these thugs are the more numerous types you will encounter , 10.0, true, 100, 20, 3, 3, 5, true, Default Combo Database, 1.0, 5.0, 2.0
+Thug Level 2,  these thugs are able similar to Thug Level 1s except they can also leap attack to close in distance , 10.0, true, 100, 20, 25, 2, 3, true, 5, true, Default Combo Database, 1.0, 5.0, 2.0
+Thug Level 3,  these thugs are more advanced with the ability to even counter the player's attacks , 15.0, true, 120, 20, 25, 2, 3, true,true, 4, true, Default Combo Database, 1.0, 6.0, 2.0
+Tank Thug,  these tank thugs are the more beefier types that take a lot longer to defeat as well as having a chance to go unstoppable where their attacks can't be interrupted , 10.0, false, 150, 20, 25, 2, 3, false, Default Combo Database, true, 0.25, 4.0, 10.0, 0.8, 4.0, 1.5

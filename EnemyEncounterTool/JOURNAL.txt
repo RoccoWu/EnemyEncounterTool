@@ -28,13 +28,13 @@ Friday 5/5:   Overview:  Worked on finalizing the Create Combat Encounters featu
     
         To do next time: Just grind and push through
 
-Saturday 5/6:   Overview: Wrapping up the project. Refactored how I was organizing my enemy types so I could call them in an dfficient way since they are not 			    changing stats
+Saturday 5/6:   Overview: Wrapping up the project. Refactored how I was organizing my enemy types so I could call them in an dfficient way since they are not 			    changing stats. CSV
     
                   (7 Hour Coding SESSION)
                     - Got the View all combat encounter to worked
 			  - Cleaned up and standardized information in toString, create conditional prints for toString.
 			  - Refactored how I store enemy types since they weren't changing, so I made a HashMap for them to keep it efficient.
-			  - Made a unique 
+			  - Wrote to CSV to save combat encounters
+			
 
-    
-        To do next time: Just grind and push through
+  
