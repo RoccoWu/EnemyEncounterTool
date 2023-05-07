@@ -5,7 +5,10 @@ public class ThugLevel3 extends ThugLevel2 implements  WeaponUser{
         super(name, health, walkSpeed, runSpeed, viewDistance, blindedMovementSpeed, description, attackDamage, initialAttackTimer, minAttackTimer, maxAttackTimer, canUseWeapon, comboDB, regularCombos, doesLeapAttack, leapAttackCooldown);
         this.canCounter = canCounter;
     }
-
+    public String toCSV() {
+        return name + ", " + description + ", " + viewDistance + ", " + regularCombos + ", " + health + ", " + attackDamage + ", " + initialAttackTimer +", " + minAttackTimer + ", "
+                + maxAttackTimer + ", " + canCounter+ "," + doesLeapAttack + ", " + leapAttackCooldown + ", " + canUseWeapon + ", " + comboDB + ", " + walkSpeed + ", " + runSpeed + ", " + blindedMovementSpeed;
+    }
     @Override
     public String toString() {
         String performsRegularCombos;

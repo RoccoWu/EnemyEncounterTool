@@ -13,7 +13,10 @@ public class TankThug extends ThugLevel1{
         this.unstoppableDuration = unstoppableDuration;
         this.unstoppableCooldown = unstoppableCooldown;
     }
-
+    public String toCSV() {
+        return name + ", " + description + ", " + viewDistance + ", " + regularCombos + ", " + health + ", " + attackDamage + ", " + initialAttackTimer +", " + minAttackTimer + ", "
+                + maxAttackTimer + ", " + canUseWeapon + ", " + comboDB + ", " + goesUnstoppable + ", " + unstoppableChance + ", " + unstoppableDuration + ", " + unstoppableCooldown + ", " + walkSpeed + ", " + runSpeed + ", " + blindedMovementSpeed;
+    }
     @Override
     public String toString() {
         String performsRegularCombos;

@@ -18,4 +18,24 @@ public class EnemyBehaviorComponent extends NPCBehaviorComponent{
         this.canUseWeapon = canUseWeapon;
         this.comboDB = comboDB;
     }
+    public String toCSV() {
+        return "";
+    }
+    public String toString() {
+        return "EnemyBehaviorComponent{" +
+                "description='" + description + '\'' +
+                ", attackDamage=" + attackDamage +
+                ", initialAttackTimer=" + initialAttackTimer +
+                ", minAttackTimer=" + minAttackTimer +
+                ", maxAttackTimer=" + maxAttackTimer +
+                ", canUseWeapon=" + canUseWeapon +
+                ", comboDB=" + comboDB +
+                ", name='" + name + '\'' +
+                ", health=" + health +
+                ", walkSpeed=" + walkSpeed +
+                ", runSpeed=" + runSpeed +
+                ", viewDistance=" + viewDistance +
+                ", blindedMovementSpeed=" + blindedMovementSpeed +
+                '}';
+    }
 }

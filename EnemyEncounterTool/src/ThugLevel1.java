@@ -6,6 +6,11 @@ public class ThugLevel1 extends EnemyBehaviorComponent implements  WeaponUser{
         this.regularCombos = regularCombos;
     }
 
+    public String toCSV() {
+        return name + ", " + description + ", " + viewDistance + ", " + regularCombos + ", " + health + ", " + attackDamage + ", " + initialAttackTimer +", " + minAttackTimer + ", "
+                + maxAttackTimer + ", " + canUseWeapon + ", " + comboDB + ", " + walkSpeed + ", " + runSpeed + ", " + blindedMovementSpeed;
+    }
+
     @Override
     public String toString() {
         String performsRegularCombos;

@@ -9,6 +9,10 @@ public class Boss extends EnemyBehaviorComponent{
         this.finisherDamage = finisherDamage;
     }
 
+    public String toCSV() {
+        return name + ", " + description + ", " + viewDistance + ", " + health + ", " + attackDamage + ", " + initialAttackTimer +", " + minAttackTimer + ", " + maxAttackTimer + ", "
+                + disableOneShotFinisher + ", " + finisherDamage + ", " + canUseWeapon + ", " + comboDB + ", " + walkSpeed + ", " + runSpeed + ", " + blindedMovementSpeed;
+    }
     @Override
     public String toString() {
         String performsRegularCombos;

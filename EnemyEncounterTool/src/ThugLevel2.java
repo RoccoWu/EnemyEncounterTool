@@ -7,6 +7,11 @@ public class ThugLevel2 extends ThugLevel1 implements  WeaponUser{
         this.leapAttackCooldown = leapAttackCooldown;
     }
 
+    public String toCSV() {
+        return name + ", " + description + ", " + viewDistance + ", " + regularCombos + ", " + health + ", " + attackDamage + ", " + initialAttackTimer +", " + minAttackTimer + ", "
+                + maxAttackTimer + ", " + doesLeapAttack + ", " + leapAttackCooldown + ", " + canUseWeapon + ", " + comboDB + ", " + walkSpeed + ", " + runSpeed + ", " + blindedMovementSpeed;
+    }
+
     @Override
     public String toString() {
         String performsRegularCombos;

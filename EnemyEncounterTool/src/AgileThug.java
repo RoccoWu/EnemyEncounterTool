@@ -7,6 +7,11 @@ public class AgileThug extends ThugLevel2{
         this.dodgeChance = dodgeChance;
         this.dodgeCooldown = dodgeCooldown;
     }
+
+    public String toCSV() {
+        return name + ", " + description + ", " + viewDistance + ", " + regularCombos + ", " + health + ", " + attackDamage + ", " + initialAttackTimer +", " + minAttackTimer + ", "
+                + maxAttackTimer + ", " + dodgeChance + ", " + dodgeCooldown + ", " + doesLeapAttack + ", " + leapAttackCooldown + ", " + canUseWeapon + ", " + comboDB + ", " + walkSpeed + ", " + runSpeed + ", " + blindedMovementSpeed;
+    }
     @Override
     public String toString() {
         String performsRegularCombos;
