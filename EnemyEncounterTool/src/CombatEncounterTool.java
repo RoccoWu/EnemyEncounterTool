@@ -1,5 +1,6 @@
 import java.util.ArrayList; //in case i want to use arraylist
 import java.util.HashMap;
+import java.util.Map;
 
 /**
  * EnemyEncounterTool runs the entire program.
@@ -106,37 +107,37 @@ public class CombatEncounterTool {
                 switch(enemyToAdd)
                 {
                     case THUGLEVEL1:
-                        newCombatEncounter.addEnemy(new ThugLevel1("Thug Level 1", 100, 1, 5, 10, 2, "these thugs are the more numerous types you will encounter", 20, 3, 3, 5, true, comboDB, true));
-                        bff.print("Added a Thug Level 1 Enemy to" + ceName);
+                        newCombatEncounter.addEnemy(new ThugLevel1("Thug Level 1", 100, 1, 5, 10, 2, " these thugs are the more numerous types you will encounter ", 20, 3, 3, 5, true, comboDB, true));
+                        bff.print("Added a Thug Level 1 Enemy to " + ceName);
                         break;
 
                     case THUGLEVEL2:
-                        newCombatEncounter.addEnemy(new ThugLevel2("Thug Level 2", 100, 1, 5, 10, 2, "these thugs are able similar to Thug Level 1s except they can also leap attack to close in distance", 20, 25, 2, 3,true, comboDB, true, true, 5));
-                        bff.print("Added a Thug Level 2 Enemy to" + ceName);
+                        newCombatEncounter.addEnemy(new ThugLevel2("Thug Level 2", 100, 1, 5, 10, 2, " these thugs are able similar to Thug Level 1s except they can also leap attack to close in distance ", 20, 25, 2, 3,true, comboDB, true, true, 5));
+                        bff.print("Added a Thug Level 2 Enemy to " + ceName);
                         break;
                     case THUGLEVEL3:
-                        newCombatEncounter.addEnemy(new ThugLevel3("Thug Level 3", 120, 1, 6, 15, 2, "these thugs are more advanced with the ability to even counter the player's attacks", 20, 25, 2, 3,true,  comboDB, true, true, 4, true));
-                        bff.print("Added a Thug Level 3 Enemy to" + ceName);
+                        newCombatEncounter.addEnemy(new ThugLevel3("Thug Level 3", 120, 1, 6, 15, 2, " these thugs are more advanced with the ability to even counter the player's attacks ", 20, 25, 2, 3,true,  comboDB, true, true, 4, true));
+                        bff.print("Added a Thug Level 3 Enemy to " + ceName);
                         break;
                     case TANKTHUG:
-                        newCombatEncounter.addEnemy(new TankThug("Tank Thug", 150,0.8 , 4, 10, 1.5, "these tank thugs are the more beefier types that take a lot longer to defeat as well as having a chance to go unstoppable where their attacks can't be interrupted", 20 , 25, 2, 3,true,  comboDB, true, 0.25, 4, 10));
-                        bff.print("Added a Tank Thug Enemy to" + ceName);
+                        newCombatEncounter.addEnemy(new TankThug("Tank Thug", 150,0.8 , 4, 10, 1.5, " these tank thugs are the more beefier types that take a lot longer to defeat as well as having a chance to go unstoppable where their attacks can't be interrupted ", 20 , 25, 2, 3,true,  comboDB, true, 0.25, 4, 10));
+                        bff.print("Added a Tank Thug Enemy to " + ceName);
                         break;
                     case AGILETHUG:
-                        newCombatEncounter.addEnemy(new AgileThug("Agile Thug", 80, 1.25, 8, 10, 2.2, "these thugs are nimble and are able to move a lot quicker as well as dodge the player's attacks", 15, 2, 2, 3,false,  comboDB, true, true, 4, 0.25, 10));
-                        bff.print("Added a Agile Thug Enemy to" + ceName);
+                        newCombatEncounter.addEnemy(new AgileThug("Agile Thug", 80, 1.25, 8, 10, 2.2, " these thugs are nimble and are able to move a lot quicker as well as dodge the player's attacks ", 15, 2, 2, 3,false,  comboDB, true, true, 4, 0.25, 10));
+                        bff.print("Added a Agile Thug Enemy to " + ceName);
                         break;
                     case KNIFETHUG:
-                        newCombatEncounter.addEnemy(new KnifeThug("Thug (Knife)", 100, 1, 6, 15, 2, "these thugs spawn with a knife already", 20, 2, 2, 3,true,  comboDB, true));
-                        bff.print("Added a Knife Thug Enemy to" + ceName);
+                        newCombatEncounter.addEnemy(new KnifeThug("Thug (Knife)", 100, 1, 6, 15, 2, " these thugs spawn with a knife already ", 20, 2, 2, 3,true,  comboDB, true));
+                        bff.print("Added a Knife Thug Enemy to " + ceName);
                         break;
                     case SHIELDTHUG:
-                        newCombatEncounter.addEnemy(new ShieldThug("Thug (Shield)", 100, 1, 6, 15, 2, "these thugs spawn with a shield already", 10, 3, 3, 4,true,  comboDB, true));
-                        bff.print("Added a Shield Thug Enemy to" + ceName);
+                        newCombatEncounter.addEnemy(new ShieldThug("Thug (Shield)", 100, 1, 6, 15, 2, " these thugs spawn with a shield already ", 10, 3, 3, 4,true,  comboDB, true));
+                        bff.print("Added a Shield Thug Enemy to " + ceName);
                         break;
                     case BOSS:
-                        newCombatEncounter.addEnemy(new Boss("Big Boss", 100, 1, 6, 15, 2, "These are boss type enemies that will ", 30, 2, 2, 4,true, comboDB, true, 100));
-                        bff.print("Added a Boss Enemy to" + ceName);
+                        newCombatEncounter.addEnemy(new Boss("Big Boss", 100, 1, 6, 15, 2, " These are boss type enemies that will ", 30, 2, 2, 4,true, comboDB, true, 100));
+                        bff.print("Added a Boss Enemy to " + ceName);
                         break;
                     }
                 }
@@ -159,13 +160,28 @@ public class CombatEncounterTool {
     {
         bff.print("VIEW ALL COMBAT ENCOUNTER");
         //TODO: View all of the combat encounters into a list and show their contents
-
+        for(Map.Entry<String, CombatEncounter> entry: combatEncounterDB.entrySet())
+        {
+            String key = entry.getKey();
+            CombatEncounter combatEncounter = entry.getValue();
+            // Access the properties or perform operations on the CombatEncounter object
+            bff.print(combatEncounter.getCombatEncounterName() + " Combat Encounter: ");
+            for (EnemyBehaviorComponent enemy : combatEncounter.enemies) {
+                bff.print("\t" + enemy);
+            }
+            bff.print("");
+            //list out everything under here
+            //bff.print(combatEncounter);
+            String name = combatEncounter.getCombatEncounterName();
+        }
+        bff.print(userInput);
     }
 
     public void lookUpEnemyTypes()
     {
         bff.print("LOOK UP ENEMY ENCOUNTER");
         //TODO: list all the enemy types in a list use ENEMYTYPE Enum, when user inputs a number it will show info no the corresponding enemy type
+        bff.printFancy(EnemyType.makeEnemyDatabase());
     }
 
     public void quit()
